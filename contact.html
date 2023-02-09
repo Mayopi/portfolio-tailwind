@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get In Touch!</title>
+
+    <link rel="stylesheet" href="dist/css/minify.css" />
+
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="h-60">
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent dark:bg-dark dark:bg-opacity-50">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a href="/index.html" class="block py-6 text-2xl font-bold text-primary lg:text-3xl">Mayo</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-slate-800 dark:shadow-slate-700 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="/index.html" class="mx-8 flex items-center gap-1 py-2 text-base font-semibold tracking-wider text-slate-800 group-hover:text-primary dark:text-white"
+                    >Beranda <i class="fa-solid fa-arrow-right-from-bracket"></i
+                  ></a>
+                </li>
+
+                <li class="flex items-center pl-8">
+                  <div class="flex">
+                    <i class="fa-solid fa-sun mr-2 text-xl text-slate-500 dark:text-white"></i>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1 dark:bg-white">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-out dark:bg-slate-500"></div>
+                      </div>
+                    </label>
+                    <i class="fa-solid fa-moon ml-2 text-xl text-slate-500 dark:text-white"></i>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="form" class="pt-44 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-4 w-full px-4 lg:w-1/2">
+            <h1 class="mb-2 text-4xl font-bold text-dark dark:text-white">Berkenalan dengan <span class="text-primary">Mayo!</span></h1>
+            <p class="font-base mb-5 text-slate-500">Tertarik untuk bekerja sama? Atau hanya ingin bertanya? Jangan ragu untuk mengisi form kontak di bawah ini.</p>
+            <form action="" id="message-form">
+              <label for="subject" class="mb-4">
+                <h2 class="mb-2 text-lg font-semibold uppercase tracking-wide text-dark dark:text-white">Subjek <span class="text-3xl font-semibold text-pink-500">*</span></h2>
+                <input type="text" id="subject" name="subject" class="block h-9 w-full rounded-md border border-primary px-4 py-2 ring-1 ring-primary focus:outline-none" placeholder="Subjek Anda" />
+              </label>
+              <label for="email" class="mb-4">
+                <h2 class="mb-2 text-lg font-semibold uppercase tracking-wide text-dark dark:text-white">Email <span class="text-3xl font-semibold text-pink-500">*</span></h2>
+                <input type="email" id="email" name="email" class="block h-9 w-full rounded-md border border-primary px-4 py-2 ring-1 ring-primary focus:outline-none" placeholder="Alamat Email" />
+              </label>
+              <label for="pesan" class="mb-4">
+                <h2 class="mb-2 text-lg font-semibold uppercase tracking-wide text-dark dark:text-white">Pesan <span class="text-3xl font-semibold text-pink-500">*</span></h2>
+                <textarea name="pesan" id="pesan" cols="30" rows="10" class="w-full rounded-xl border border-primary py-2 px-4 text-lg ring-1 ring-primary focus:outline-none"></textarea>
+              </label>
+
+              <button type="submit" class="group mx-auto mt-5 block w-1/2 rounded-full bg-primary px-4 py-2 text-xl font-semibold uppercase text-white shadow-lg transition duration-300 hover:bg-cyan-600">
+                Send it <i class="fa-solid fa-rocket group-hover:animate-wiggle group-hover:text-red-400" id="send-message"></i>
+              </button>
+            </form>
+          </div>
+          <div class="mb-4 w-full px-4 lg:w-1/2">
+            <div class="card overflow-hidden rounded-xl shadow-md dark:shadow-slate-600">
+              <img src="dist/img/contact-message.jpg" alt="contact-image-vector" />
+            </div>
+            <a
+              href="https://www.freepik.com/free-vector/tiny-women-getting-mail-from-mailbox-flat-vector-illustration-cartoon-people-reading-newsletter-social-news-marketing-mail-service-business-concept_10613764.htm#query=message%20vector&position=20&from_view=search&track=sph"
+              class="my-2 mb-5 text-xs text-slate-500"
+              >Image by pch.vector on Freepik</a
+            >
+
+            <div class="mb-10 w-full">
+              <ul class="text-lg font-semibold text-slate-500">
+                <li class="mb-2"><i class="fa-solid fa-location-dot"></i> Jl. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, hic!</li>
+              </ul>
+              <ul class="text-lg font-semibold text-slate-500">
+                <li class="mb-2"><i class="fa-solid fa-envelope"></i> cyade007@gmail.com</li>
+              </ul>
+            </div>
+
+            <div class="flex w-full justify-center gap-3 px-4">
+              <a href="https://discord.gg/uRHYyXnxMt" class="text-3xl font-semibold text-slate-500 hover:text-primary"><i class="fa-brands fa-discord"></i></a>
+              <a href="https://github.com/Mayopi" class="text-3xl font-semibold text-slate-500 hover:text-primary"><i class="fa-brands fa-github"></i></a>
+              <a href="https://instagram.com/_mayopi" class="text-3xl font-semibold text-slate-500 hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCsiG2IQP062S7RCWiMxEGJQ" class="text-3xl font-semibold text-slate-500 hover:text-primary"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="mt-10 bg-dark pt-24 pb-12 dark:mt-0">
+        <div class="container">
+          <div class="mb-5 w-full px-4 text-slate-500">
+            <p class="text-center text-xs lg:text-base">Made with ❤️ by <a href="https://instagram.com/_mayopi" target="_blank" class="font-semibold text-primary">Mayo</a></p>
+            <p class="mt-2 text-center text-xs lg:text-base">&copy; Copyright Mayo 2023 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/8c31414ffe.js" crossorigin="anonymous"></script>
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>

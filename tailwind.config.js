@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: ["index.html", "contact.html"],
   darkMode: "class",
   theme: {
     extend: {
@@ -16,6 +16,17 @@ module.exports = {
 
       screens: {
         "2xl": "1320px",
+      },
+
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-7deg)" },
+          "50%": { transform: "rotate(7deg)" },
+        },
       },
     },
   },
